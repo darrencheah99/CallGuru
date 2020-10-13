@@ -13,7 +13,7 @@ import App from './components/app';
 const reactReduxApp = document.getElementById('react_redux_app');
 
 const initialState = {
-  // someAttribute: JSON.parse(reactReduxApp.dataset.someAttribute).map(c => c.name)
+  projects: JSON.parse(reactReduxApp.dataset.projects)//.map(c => c.name)
 };
 
 const middlewares = applyMiddleware(logger, ReduxPromise);
@@ -25,7 +25,7 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={App} />
+        <Route path="/projects" component={App} />
       </Switch>
     </BrowserRouter>
   </Provider>,

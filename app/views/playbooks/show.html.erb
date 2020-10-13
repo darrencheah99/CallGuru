@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @playbook.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @playbook.description %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @playbook.product %>
+</p>
+
+<%= link_to 'Edit', edit_playbook_path(@playbook) %> |
+<%= link_to 'Back', playbooks_path %>

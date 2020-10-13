@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root to: 'pages#landing'
+  get 'projects', to: 'pages#app'
+  # resources :scripts
+  # resources :sections
+  # resources :playbooks
+  # resources :goals
+  # resources :products
+  # resources :companies
 
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :products
+    end
+  end
 
 
   # This is an example for building the api routes for a chat.
